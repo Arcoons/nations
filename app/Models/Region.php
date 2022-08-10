@@ -23,4 +23,10 @@ class Region extends Model
         //into relared model REGION
         return $this->hasMany(Country::class, 'region_id');
     }
+    public function continent(){
+        //BelongsTo method:
+        //1. Related model
+        //2. Foreign key of related model in current model
+        return $this->belongsTo(Continent::class, 'continent_id');
+}   
 }
